@@ -28,8 +28,8 @@ def write_to_csv(data, output_file):
 
 if __name__ == "__main__":
     # var  = os.get_exec_path("as.exe")
-    kml_file = r'C:\Users\VML024\Documents\proj1\gps\25feb-02.kml'
-    output_csv = r'C:\Users\VML024\Documents\proj1\gps\output_coordinates.csv'
+    kml_file = r'25feb-02.kml'
+    output_csv = r'output_coordinates.csv'
 
     extracted_coordinates = extract_coordinates_from_kml(kml_file)
     write_to_csv(extracted_coordinates, output_csv)
