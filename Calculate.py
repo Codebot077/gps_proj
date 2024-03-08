@@ -1,14 +1,14 @@
 import pandas as pd
 from geopy.distance import geodesic
-
+import matplotlib as mp
 
 file_path = r'output_coordinates.csv'
 df = pd.read_csv(file_path)
-
+ 
 
 # Remove the last part from each entry in the 'timestamp' column
 df['Timestamp'] = df['Timestamp'].apply(lambda x: x.split()[0])
-
+       
 def calculate_velocity(coord1, coord2, time1, time2):
     distance = geodesic(coord1, coord2).kilometers
     time_diff = (time2 - time1).total_seconds() / 3600  # Convert seconds to hours

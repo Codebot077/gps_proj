@@ -26,8 +26,8 @@ def write_to_csv(data, output_file):
         writer.writerow(['Timestamp', 'Latitude', 'Longitude', 'Altitude'])
         writer.writerows(data)
 
+        
 if __name__ == "__main__":
-    # var  = os.get_exec_path("as.exe")
     kml_file = r'25feb-02.kml'
     output_csv = r'output_coordinates.csv'
 
